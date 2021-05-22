@@ -1,0 +1,125 @@
+body {
+    background-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* .banner img {
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: static;
+    width: 100%;
+    height: 900px;
+    z-index: 1000;
+}  */
+
+main {
+    min-height: 100vh;
+    color: rgb(1, 17, 31);
+}
+
+
+.lgtbx {
+    opacity: .6;
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: .2s;
+    background-color: rgba(0,0,0,.8);
+    z-index: -1;
+}
+
+
+.background-window {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.homepage {
+    color:aliceblue;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.homepage .banner {
+    background: url('../Images/teaching_languages.jpg') fixed no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    border-bottom: 3px solid rgb(11, 73, 54);
+    position: relative;
+    z-index: -2;
+}
+
+.homepage .content {
+    position: absolute;
+    word-spacing: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto", Arial, sans-serifl
+}
+
+.homepage .content p {
+    text-shadow: -2px 6px 8px azure;
+    font-style: italic;
+}
+
+.homepage .content h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    font-weight: 100;
+}
+
+.content p {
+    font-size: 16px;
+    color:azure;
+}
+
+.content #maintext {
+    word-spacing: 3px;
+    /* margin-left: 150px;
+    margin-right: 120px; */
+    padding: 60px 120px 50px 100px;
+    color: gray;
+}
+
+/* .logo {
+    float: right;
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+}
+ */
+
+#menubar {
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    position: fixed;
+    float: right;
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(118, 219, 202);
+}
+
+.section {
+    text-align: center;
+    margin: 150px;
+}
