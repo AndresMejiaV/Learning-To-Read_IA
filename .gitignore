@@ -1,3 +1,7 @@
 # Useless files for the project
 
 Resources
+node_modules/
+Tests/
+Notes.md
+TestModules.js
