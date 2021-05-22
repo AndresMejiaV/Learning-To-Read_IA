@@ -1,0 +1,80 @@
+{
+    "id": "pastar",
+    "metadata": {
+        "operation": "retrieve",
+        "provider": "Oxford University Press",
+        "schema": "RetrieveEntry"
+    },
+    "results": [
+        {
+            "id": "pastar",
+            "language": "es",
+            "lexicalEntries": [
+                {
+                    "entries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "id": "intransitive",
+                                    "text": "Intransitive",
+                                    "type": "Subcategorization"
+                                }
+                            ],
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "Comer [el ganado] el pasto para alimentarse"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "los ganaderos exigen un mayor control sobre los animales que pastan en el coto"
+                                        }
+                                    ],
+                                    "id": "id187ee3ef-6680-4968-b6af-7207cdbedb0c",
+                                    "synonyms": [
+                                        {
+                                            "language": "es",
+                                            "text": "pacer"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "id": "transitive",
+                                    "text": "Transitive",
+                                    "type": "Subcategorization"
+                                }
+                            ],
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "Llevar o conducir el ganado al pasto"
+                                    ],
+                                    "id": "ide88bee7d-d208-4827-a85c-8b2c4514a602",
+                                    "synonyms": [
+                                        {
+                                            "language": "es",
+                                            "text": "apacentar"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "es",
+                    "lexicalCategory": {
+                        "id": "verb",
+                        "text": "Verb"
+                    },
+                    "text": "pastar"
+                }
+            ],
+            "type": "headword",
+            "word": "pastar"
+        }
+    ],
+    "word": "pastar"
+}
