@@ -1,5 +1,5 @@
 var axios = require("axios");
-require('dotenv').config({ path: '/home/nullquasar/Coding/IA-Project/utils/.env' });
+require('dotenv').config({ path: `../${__dirname}/.env` });
 
 const my_app_id = process.env.OXFORD_ID;
 const my_app_key = process.env.OXFORD_KEY;

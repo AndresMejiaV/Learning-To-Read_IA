@@ -1,6 +1,7 @@
 const axios = require("axios");
-require('dotenv').config({ path: '/home/nullquasar/Coding/IA-Project/utils/.env' });
-const APIKey = process.env.CV_KEY;
+require('dotenv').config({ path: `../${__dirname}/.env` });
+// const APIKey = process.env.CV_KEY;
+const APIKey = '9f8839e9bd4e446c8d1bfad49bd6db72';
 
 module.exports = async function(fileUrl){
 
@@ -42,12 +43,12 @@ module.exports = async function(fileUrl){
         }
     })
     .then( response => {
-        // return getText(response.headers.operationId);
-        return response.headers.date;
+        return getText(response.headers.operationId);
     })
 };
 
 
+// https://southcentralus.dev.cognitive.microsoft.com/docs/services/computer-vision-v3-2/operations/5d9869604be85dee480c8750
 
 
 

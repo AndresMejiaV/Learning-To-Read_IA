@@ -1,5 +1,5 @@
 const axios = require("axios");
-require('dotenv').config({ path: '/home/nullquasar/Coding/IA-Project/utils/.env' });
+require('dotenv').config({ path: `../${__dirname}/.env` });
 const APIKey = process.env.LANGKEY;
 
 module.exports = async function(from, to, text) {
