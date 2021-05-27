@@ -205,7 +205,34 @@ hr {
     transform: translateX(-50%);
 }
 
+input {
+    background-color: #f1f1f1;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+    padding: 4px 8px;
+    margin: 6px auto;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    transition: 0.3s;
+}
 
+input:hover {
+    background-color: black;
+    color: white;
+  }
+
+
+#img-result-title {
+    color: #e8ecf2;
+    margin: 25px 8px;
+    font-size: 22px;
+}
+
+#img-text {
+    font-size: medium;
+}
 
 footer {
     text-align: center;

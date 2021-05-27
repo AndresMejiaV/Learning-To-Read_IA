@@ -15,44 +15,48 @@
 
 
     <!-- Web Files -->
-    <link rel="stylesheet" href="../Styles/sidebar.css">
-    <link rel="stylesheet" href="../Styles/main.css">
-    <script src="../Scripts/main.js"></script>
-
+    <link rel="stylesheet" href="./Styles/sidebar.css">
+    <link rel="stylesheet" href="./Styles/main.css">
+    <script src="./Scripts/main.js"></script>
+    <script src="./Scripts/speech.js"></script>
+    <script src="./Scripts/AddSpeechButton.js"></script>
+    <script src="./Scripts/Announces.js"></script>
 
 	<title>¡Aprende a leer!</title>
+
 </head>
 
-<body>
+<body onload="announce()">
     
     <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
     <!-- <i class="material-icons md-24" alt="menu bar" id="menu-icon" onclick="hiddeMenu()">menu_open</i> -->
     <!-- <i class="material-icons md-24" alt="close menu bar" id="close" onclick="hiddeMenu()">close</i> -->
-
-    <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
-        <h1 id="fh5co-logo"><a href="index.html">Navegacion</a></h1>
-        <nav id="fh5co-main-menu" role="navigation">
-            <ul>
-                <li class="fh5co-active"><a href="index.html">Pagina principal</a></li>
-                <li><a href="vowels.html">Vocales</a></li>
-                <li><a href="syllables.html">Silabas</a></li>
-                <li><a href="stories.html">Historias</a></li>
-                <li><a href="learned.html">Aprendido</a></li>
-                <li><a href="speech-to-text.html">Pronunciar</a></li>
-                <li><a href="about.html">Acerca de</a></li>
-            </ul>
-        </nav>
-
-        <div class="fh5co-footer">
-            <ul>
-                <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li><a href="#"><i class="icon-twitter2"></i></a></li>
-                <li><a href="#"><i class="icon-instagram"></i></a></li>
-                <li><a href="#"><i class="icon-linkedin2"></i></a></li>
-            </ul>
-        </div>
-
-    </aside>
+    <!-- <div id="fh5co-page">
+        <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+            <h1 id="fh5co-logo"><a href="index.html">Navegacion</a></h1>
+            <nav id="fh5co-main-menu" role="navigation">
+                <ul>
+                    <li class="fh5co-active"><a href="index.html">Pagina principal</a></li>
+                    <li><a href="vowels.html">Vocales</a></li>
+                    <li><a href="syllables.html">Silabas</a></li>
+                    <li><a href="stories.html">Historias</a></li>
+                    <li><a href="learned.html">Aprendido</a></li>
+                    <li><a href="speech-to-text.html">Pronunciar</a></li>
+                    <li><a href="about.html">Acerca de</a></li>
+                </ul>
+            </nav>
+    
+            <div class="fh5co-footer">
+                <ul>
+                    <li><a href="#"><i class="icon-facebook2"></i></a></li>
+                    <li><a href="#"><i class="icon-twitter2"></i></a></li>
+                    <li><a href="#"><i class="icon-instagram"></i></a></li>
+                    <li><a href="#"><i class="icon-linkedin2"></i></a></li>
+                </ul>
+            </div>
+    
+        </aside>
+    </div> -->
 
 
     <!-- Home page -->
@@ -60,7 +64,7 @@
 
         <div class='content'>
             <h1>Aprende con nosotros!</h1>
-            <p>Ya sea que desees aprender a leer tu idioma u algun idioma extranjero, nosotros te ayudaremos!</p>
+            <p id="home-intro">Ya sea que desees aprender a leer tu idioma u algun idioma extranjero, nosotros te ayudaremos!</p>
         </div>
 
         <span class="lgtbx"></span>
@@ -72,35 +76,305 @@
     <main>
         <section class="section">
         
-            <article class="learn-vowels">
+            <article class="Intro">
+
                 <header>
-                    <h2>Start by learning vowels!</h2>
+                    <h2>Introduccion y uso</h2>
                 </header>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                    <p class="main-paragraph">
+                        Antes de comenzar, asegurate que tienes un familiar, amigo o cualquier persona quien te pueda guiar a utilizando nuestro servicio
+                        actual, si no es asi, por favor hazlo para comenzar
+                    </p>
+                    
             </article>
             
+            <hr/>
         </section>
 
         <section class="section">
         
+            <article class="learn-vowels">
+                <header>
+                    <h2>Aprende las vocales!</h2>
+                </header>
+
+                <p>
+                    Aprender las vocales es el primer paso para comprender la fonetica y la escritura del idioma, son solo 4 pero asegurate de aprenderlas
+                    correctamente!
+                </p>
+                <table id="vowels" align="center">
+                    <tr>
+                        <td style="color:red;">a</td>
+                        <td style="color:darkgreen;">b</td>
+                        <td style="color:blueviolet;">c</td>
+                        <td style="color:blue;">d</td>
+                    </tr>
+                </table>
+
+                <p>
+                    Asegurate de haber practicado su pronunciacion y escritura!
+                </p>
+            </article>
+
+            <hr/>
+        </section>
+        
+        
+        <section class="section">
+        
             <article class="learn-syllables">
                 <header>
-                    <h2>Learn the syllables</h2>
-                    <p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
+                    <h2>Ahora que ya sabes las vocales podemos comenzar con las silabas!</h2>
                 </header>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                <p>
+                    Las silabas son solo la combinacion entre las vocales que ya aprendiste y las consonantes
+                </p>
+                <table id="syllables" align="center">
+
+                    <tr style="color:aqua;">
+                        <td>Ba</td>
+                        <td>Ca</td>
+                        <td>Da</td>
+                        <td>Fa</td>
+                        <td>Ga</td>
+                        <td>Ha</td>
+                        <td>Ja</td>
+                        <td>Ka</td>
+                        <td>La</td>
+                        <td>Ma</td>
+                        <td>Na</td>
+                        <td>Ña</td>
+                        <td>Pa</td>
+                        <td>Qua</td>
+                        <td>Ra</td>
+                        <td>Sa</td>
+                        <td>Ta</td>
+                        <td>Va</td>
+                        <td>Wa</td>
+                        <td>Xa</td>
+                        <td>Ya</td>
+                        <td>Za</td>
+                        <td>Cha</td>
+                        <td>Lla</td>
+                    </tr>
+                    
+                    <tr style="color:lightgreen;">
+                        <td>Be</td>
+                        <td>Ce</td>
+                        <td>De</td>
+                        <td>Fe</td>
+                        <td>Ge</td>
+                        <td>He</td>
+                        <td>Je</td>
+                        <td>Ke</td>
+                        <td>Le</td>
+                        <td>Me</td>
+                        <td>Ne</td>
+                        <td>Ñe</td>
+                        <td>Pe</td>
+                        <td>Que</td>
+                        <td>Re</td>
+                        <td>Se</td>
+                        <td>Te</td>
+                        <td>Ve</td>
+                        <td>We</td>
+                        <td>Xe</td>
+                        <td>Ye</td>
+                        <td>Ze</td>
+                        <td>Che</td>
+                        <td>Lle</td>
+                    </tr>
+                    
+                    <tr style="color:lightcoral;">
+                        <td>Bi</td>
+                        <td>Ci</td>
+                        <td>Di</td>
+                        <td>Fi</td>
+                        <td>Gi</td>
+                        <td>Hi</td>
+                        <td>Ji</td>
+                        <td>Ki</td>
+                        <td>Li</td>
+                        <td>Mi</td>
+                        <td>Ni</td>
+                        <td>Ñi</td>
+                        <td>Pi</td>
+                        <td>Qui</td>
+                        <td>Ri</td>
+                        <td>Si</td>
+                        <td>Ti</td>
+                        <td>Vi</td>
+                        <td>Wi</td>
+                        <td>Xi</td>
+                        <td>Yi</td>
+                        <td>Zi</td>
+                        <td>Chi</td>
+                        <td>Lli</td>
+                    </tr>
+                    
+                    <tr style="color:lightseagreen;">
+                        <td>Bo</td>
+                        <td>Co</td>
+                        <td>Do</td>
+                        <td>Fo</td>
+                        <td>Go</td>
+                        <td>Ho</td>
+                        <td>Jo</td>
+                        <td>Ko</td>
+                        <td>Lo</td>
+                        <td>Mo</td>
+                        <td>No</td>
+                        <td>Ño</td>
+                        <td>Po</td>
+                        <td>Quo</td>
+                        <td>Ro</td>
+                        <td>So</td>
+                        <td>To</td>
+                        <td>Vo</td>
+                        <td>Wo</td>
+                        <td>Xo</td>
+                        <td>Yo</td>
+                        <td>Zo</td>
+                        <td>Cho</td>
+                        <td>Llo</td>
+                    </tr>
+
+                    <tr style="color:aqua;">
+                        <td>Bu</td>
+                        <td>Cu</td>
+                        <td>Du</td>
+                        <td>Fu</td>
+                        <td>Gu</td>
+                        <td>Hu</td>
+                        <td>Ju</td>
+                        <td>Ku</td>
+                        <td>Lu</td>
+                        <td>Mu</td>
+                        <td>Nu</td>
+                        <td>Ñu</td>
+                        <td>Pu</td>
+                        <td>Qu</td>
+                        <td>Ru</td>
+                        <td>Su</td>
+                        <td>Tu</td>
+                        <td>Vu</td>
+                        <td>Wu</td>
+                        <td>Xu</td>
+                        <td>Yu</td>
+                        <td>Zu</td>
+                        <td>Chu</td>
+                        <td>Llu</td>
+                    </tr>
+
+                </table>
             </article>
             
+            <hr/>
         </section>
     
-        <!-- <aside>
-            <h2>About section</h2>
-            <p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-        </aside> -->
+        <section class="section">
+        
+            <article class="Intro">
+
+                <header>
+                    <h2>Practica lo que has aprendido!</h2>
+                </header>
+
+                    
+                    <!-- <a class="show-msg" href="#optional-text" onclick="showMsg()">Mostrar Mensaje</a> -->
+                    <p class="main-paragraph">
+                        ¡Tenemos algunas historias divertidas e interesantes para que no te aburras en tu aprendizaje!.
+                        <br/>
+                    </p>
+                    <h3>¡No te preocupes si tienes problemas!</h3>
+                    <p>
+                        Contamos con algunas herramientas que te pueden ser de utilidad para ayudarte y enriquecer tu aprendizaje.
+                        ¡Veras que son intuitivas y faciles de encontrar!. Intenta poner el raton sobre una palabra
+                    </p>
+                    
+                </article>
+                
+                <hr/>
+            </section>
+
+        <!-- <section class="section">
+    
+            <article class="Intro">
+
+                <header>
+                    <h2>Repasa lo aprendido!</h2>
+                </header>
+
+                    <p class="main-paragraph">
+                        En esta seccion encontraras tu progreso de aprendizaje para que te asegures de haber aprendido todo correctamente.
+                        ¡No olvides practicar lo que se te dificulte!
+                    </p>
+                    
+                </article>
+                
+        </section> -->
+            
+            <section class="section">
+        
+                <article class="Intro">
+    
+                    <header>
+                        <h2>¿Tienes problemas leyendo una imagen?, ¡Aqui te ayudaremos!</h2>
+                    </header>
+    
+                        <p class="main-paragraph">
+                            Al igual que siempre, puedes apoyarte de las herramientas que te brindamos para ayudarte con tu aprendizaje.
+                        </p>
+                        
+                        <div id="analyze">
+                            <img src="" class="image" id="image" / >
+                            <!-- Action: send link to nodejs module -->
+                            <!-- http://localhost:4000/post-test -->
+                            <!-- action="getImgText()"  -->
+                            <!-- method="POST" enctype="multipart/form-data" -->
+                            <form>
+                                <!-- <input type="url" placeholder="https://i.imgur.com/u2Unmra.jpeg" class="img-link" required /> -->
+                                <input type="file" name="imgFile" id="img-File">
+                                <!-- <input type="submit" value="Upload Image" name="submit"> -->
+                                <input type="button" value="Subir Imagen" name="submit" onclick="getImgText()">
+                            </form>
+
+                            <div class="result-text">
+                                <!-- Create text element with its content with js -->
+                                <p id="img-text"></p>
+                            </div>
+
+                        </div>
+
+                    </article>
+                    
+                    <hr/>
+                </section>
+
+                <section class="section">
+        
+                    <article class="Intro">
+        
+                        <header>
+                            <h2>Bienvenido a la guia de uso para nuestras herramientas!</h2>
+                        </header>
+        
+                            <!-- <a class="show-msg" href="#optional-text" onclick="showMsg()">Mostrar Mensaje</a> -->
+                            <p class="main-paragraph">
+                                No dejes que te intimiden, tienen la caracteristica de ser muy intuitivas y faciles de usar.
+                            </p>
+                            
+                    </article>
+                    
+                    <hr/>
+                </section>
+
     </main>
 
 	<footer>
-		<p>Copyright 2021 Andres Mejia</p>
+		<p>&copy; Copyright 2021 Andres Mejia</p>
 	</footer>
 
 </body>
