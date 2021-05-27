@@ -2,10 +2,10 @@
 
 ## ¿Qué es Learn-To-Read_IA?
 
-En un estudio de La Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura ([Unesco](https://en.unesco.org/)) informó que actualmente en el mundo hay más de `750` millones de personas en el mundo no saben leer ni escribir (Son analfabetas), entre estas personas en su mayoría se encuentran mujeres y principalmente en África, esto definitivamente es un problema, ya que en la actualidad leer y escribir es sumamente importante para integrarse a nuestra sociedad actual. El objetivo de este proyecto consiste justamente en ayudar a esas personas que requieren aprender a leer y escribir, pero también busca servir como herramienta para aquellos que desean aprender un nuevo idioma.
+En un estudio de La Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura ([Unesco](https://en.unesco.org/)) informó que actualmente en el mundo hay más de `750 millones` de personas en el mundo no saben leer ni escribir (Son analfabetas), entre estas personas en su mayoría se encuentran mujeres y principalmente en África, esto definitivamente es un problema, ya que en la actualidad leer y escribir es sumamente importante para integrarse a nuestra sociedad actual. El objetivo de este proyecto consiste justamente en ayudar a esas personas que requieren aprender a leer y escribir, pero también busca servir como herramienta para aquellos que desean aprender un nuevo idioma.
 
 
-## ¿Como funciona?
+## ¿Cómo funciona?
 
 El objetivo de esta página web es enseñar a leer a aquellas personas que no saben hacerlo, ¿verdad?, para esto la página web contara con una funcionalidad para pronunciar todos los textos que en ella se encuentran, a través de un botón que permita que el cliente escuche su contenido, de esta manera podrá reconocer y aprender la estructura del lenguaje.
 
