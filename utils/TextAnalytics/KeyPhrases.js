@@ -1,6 +1,7 @@
 const axios = require("axios");
-require('dotenv').config({ path: `../${__dirname}/.env` });
-const ApiKey = process.env.TEXT_KEY;    
+const parent_dir = require('path').resolve(__dirname, '..');
+require('dotenv').config({ path: parent_dir + '/.env' });
+const ApiKey = process.env.TEXT_KEY;
 
 module.exports = async function( langCode, text ) {
     data = 

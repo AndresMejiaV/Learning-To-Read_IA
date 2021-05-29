@@ -1,6 +1,7 @@
 const axios = require("axios");
-require('dotenv').config({ path: `../${__dirname}/.env` });
-const APIKey = process.env.LANGKEY;
+const parent_dir = require('path').resolve(__dirname, '..');
+require('dotenv').config({ path: parent_dir + '/.env' });
+const APIKey = process.env.LANG_KEY;
 
 module.exports = async function(from, to, text) {
     const request_url = `https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&from=${from}&to=${to}`;
