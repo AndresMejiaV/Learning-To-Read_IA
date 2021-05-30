@@ -21,8 +21,8 @@ La página web cuenta con varias funcionalidades que consumen algunos servicios 
 - Diccionario de palabras para múltiples idiomas
 - Análisis de texto para extracción de palabras y frases clave
 - Análisis de imágenes para extracción de texto
+- Multiples cuentos de practica
 - Detección y traducción de palabras
-
 
 > Nota: El objetivo de este repositorio es ilustrar la idea de un proyecto para el programa educativo de Microsoft, MagIA Juvenil, por lo tanto no se trata de un proyecto completo diseñado para ser un producto.
 
