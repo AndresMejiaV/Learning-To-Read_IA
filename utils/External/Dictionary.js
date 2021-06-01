@@ -22,7 +22,7 @@ module.exports = async function (lang, word) {
 
   }
   catch (error) {
-    return error;
+    return "Palabra no encontrada.";
   }
 }
 
