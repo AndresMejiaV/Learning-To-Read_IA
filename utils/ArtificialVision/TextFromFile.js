@@ -10,27 +10,29 @@ module.exports = async function(fileUrl){
         "url": fileUrl
     };
 
-    async function getText(opId) {
+    function getText(opId) {
         let wholeText = "";
+        let data;
 
         let headers = {
             'Ocp-Apim-Subscription-Key': APIKey,
         }
 
         // Get the data or return the error
-        try {
-            let { response } = await axios.get(opId, { headers });
-            response = response.analyzeResult.readResults[0].lines;
-        }
-        catch (error) {
-            return error;
-        }
+        axios.get(opId, { headers })
+        .then(response => {
+            data = response.data.analyzeResult.readResults[0].lines;
 
-        // Get the text of every sentence
-        for (c = 0; c < data.length; c++) {
-            wholeText += data[c].text + '\n';
-        }
+            // Get the text of every sentence
+            for (c = 0; c < data.length; c++) {
+                // console.log(data[c]);
+                wholeText += data[c].text + '\n';
+            }
 
+        })
+       .catch(err => {
+           console.log("Error when extracting text from file...");
+       });
 
         return wholeText;
     }
@@ -43,6 +45,7 @@ module.exports = async function(fileUrl){
         }
     })
     .then( response => {
-        return getText(response.headers.operationId);
+        // return getText(response.headers.operationId);
+        return getText(response.headers['operation-location']);
     })
 };
