@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     /* background-color: #ffffff; */
     background: rgb(232,236,236);
@@ -20,6 +25,9 @@ body {
     z-index: 1000;
 }  */
 
+
+
+
 main {
     min-height: 100vh;
     color: rgb(1, 17, 31);
@@ -27,7 +35,9 @@ main {
 
 p {
     padding: 20px;
+    display: block;
 }
+
 
 table, #syllables table, tr, td {
 	margin: 0 auto;
@@ -37,6 +47,79 @@ table, #syllables table, tr, td {
 
 hr {
     margin-top: 35px;
+}
+
+
+input[type="search"], input[type="text"], input[type="url"], textarea {
+    border: darkblue 2px solid;
+	border-radius: 10px;
+    width: 70%;
+	height: 20px;
+    margin: 25px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+textarea {
+    text-align: left;
+    padding: 10px;
+}
+
+.nav-main a {
+    color: #8d8f97;
+    text-decoration: none;
+}
+
+.nav-main ul {
+    list-style: none;
+}
+
+.nav-main {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 18px;
+    height: 60px;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-main ul {
+    display: flex;
+}
+
+.nav-main ul li {
+	padding: 0 28px;
+	display: block ruby;
+}
+
+.nav-main ul li a {
+    padding: 2px;
+    transition: 0.3s;
+}
+
+.nav-main ul li a:hover {
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.nav-main ul.nav-menu {
+    margin: 20px;
+    flex: 1;
+}
+
+#user-word {
+    color: #18d035;
+    margin: 10px 10px 25px 10px;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+#key-phrases-input {
+    height: 150px;
+    color: teal;
 }
 
 .material-icons::selection {
@@ -97,7 +180,7 @@ hr {
     font-style: italic;
 }
 
-.homepage .content h1 {
+.homepage .content h1, h1 {
     font-size: 45px;
     margin-bottom: 10px;
     line-height: 1.3;
@@ -144,7 +227,6 @@ hr {
 .section h2 {
     font-size: 33px;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .section p {
@@ -167,19 +249,19 @@ hr {
 #syllables {
     font-size: 25px;
     font-weight: bolder;
-    display: block;
-    /* margin: 40px 0 45px 0; */
+    display: table;
 }
 
 #syllables td {
     padding: 10px;
 }
 
-
-.speech-icon {
-    position: absolute;
-    top: 0;
-    right: 0;
+#tools {
+	text-align: center;
+	font-family: verdana, helvetica, sans-serif;
+	font-weight: 800;
+	color: #099cbd;
+	letter-spacing: 2px;
 }
 
 
@@ -205,7 +287,8 @@ hr {
     transform: translateX(-50%);
 }
 
-input {
+input[type="file"], input[type="button"], input[type="submit"], button {
+
     background-color: #f1f1f1;
     color: rgba(0, 0, 0, 0.7);
     font-size: 16px;
@@ -218,7 +301,7 @@ input {
     transition: 0.3s;
 }
 
-input:hover {
+input[type="file"]:hover, input[type="button"]:hover, input[type="submit"]:hover, button:hover {
     background-color: black;
     color: white;
   }
@@ -234,19 +317,57 @@ input:hover {
     font-size: medium;
 }
 
+.buttons {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-left: 200px;
+    margin-bottom: 200px;
+}
+
+
+.speech-buttons {
+    position: absolute;
+    right: 0;    
+    margin: -20px 0 0 0;
+    display: block;
+}
+
+.play, .stop, .pause {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+}
+
+.play {
+    right: 0px;
+    animation-name: speech;
+    animation-duration: 3s;
+}
+
+.pause {
+    right: 5px
+}
+
+.stop {
+    right: 10px;
+}
+
+
 footer {
     text-align: center;
 }
 
 
-/* @keyframes speech {
+@keyframes speech {
     33% {
-        idk.content = "volume_mute";
+        content: "volume_mute";
     }
     66% {
-        idk.content = "volume_down";
+        content: "volume_down";
     }
-    99% {
-        idk.content = "volume_up";
+    100% {
+        content: "volume_up";
     }
-} */
+}
