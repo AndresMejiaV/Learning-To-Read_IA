@@ -1,39 +1,38 @@
 <!DOCTYPE HTML>
 
 <html>
-
 <head>
 
     <!-- Metas -->
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <!-- Web page favicon -->
+    <!-- Literature icon by Icons8 -->
     <link rel="shortcut icon" href="Images/favicon/favicon-96x96.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="./Images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./Images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./Images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./Images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./Images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./Images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./Images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./Images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./Images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./Images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./Images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./Images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./Images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./Images/favicon/manifest.json">
-
+    <link rel="apple-touch-icon" sizes="57x57" href="Images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="Images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="Images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="Images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="Images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="Images/faviconImages/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="Images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="Images/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
+    
+    <!-- JQuery for on click word event (dictionary) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
 
     <!-- Web Files -->
     <link rel="stylesheet" href="./Styles/sidebar.css">
@@ -47,45 +46,59 @@
 
 </head>
 
-<body onload="announce()">
-    
-    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-    <!-- <i class="material-icons md-24" alt="menu bar" id="menu-icon" onclick="hiddeMenu()">menu_open</i> -->
-    <!-- <i class="material-icons md-24" alt="close menu bar" id="close" onclick="hiddeMenu()">close</i> -->
-    <!-- <div id="fh5co-page">
-        <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
-            <h1 id="fh5co-logo"><a href="index.html">Navegacion</a></h1>
-            <nav id="fh5co-main-menu" role="navigation">
-                <ul>
-                    <li class="fh5co-active"><a href="index.html">Pagina principal</a></li>
-                    <li><a href="vowels.html">Vocales</a></li>
-                    <li><a href="syllables.html">Silabas</a></li>
-                    <li><a href="stories.html">Historias</a></li>
-                    <li><a href="learned.html">Aprendido</a></li>
-                    <li><a href="speech-to-text.html">Pronunciar</a></li>
-                    <li><a href="about.html">Acerca de</a></li>
-                </ul>
-            </nav>
-    
-            <div class="fh5co-footer">
-                <ul>
-                    <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                    <li><a href="#"><i class="icon-twitter2"></i></a></li>
-                    <li><a href="#"><i class="icon-instagram"></i></a></li>
-                    <li><a href="#"><i class="icon-linkedin2"></i></a></li>
-                </ul>
-            </div>
-    
-        </aside>
-    </div> -->
+<body onload="setSpeechIconsAnimation()">
 
-
+    <!-- <script src="./Scripts/ClickWord.js"></script> -->
+    
+    
     <!-- Home page -->
 	<header class="homepage">
 
-        <div class='content'>
-            <h1>Aprende con nosotros!</h1>
-            <p id="home-intro">Ya sea que desees aprender a leer tu idioma u algun idioma extranjero, nosotros te ayudaremos!</p>
+        <nav class='nav-main'>
+        
+            <ul class='nav-menu'>
+                <li>
+                    <a href='#intro'>Introduccion</a>
+                </li>
+                <li>
+                    <a href='#learn-vowels'>Vocales</a>
+                </li>
+                <li>
+                    <a href='#learn-syllables'>Silabas</a>
+                </li>
+                <li>
+                    <a href='#stories'>Relatos</a>
+                </li>
+                <li>
+                    <a href='#text-analytics'>Analisis de texto</a>
+                </li>
+                <li>
+                    <a href='#dictionary'>Diccionario</a>
+                </li>
+                <li>
+                    <a href='#translate'>Traduccion</a>
+                </li>
+                <li>
+                    <a href='#image-analytics'>Analisis de imagen</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="content">
+            <div class="speech-buttons">
+                <!-- Stop -->
+                <i class="stop material-icons md-28" onclick="onStop()">stop</i>
+                <!-- Pause -->
+                <i class="pause material-icons md-28" onclick="onPause()">pause</i>
+                <!-- Play -->
+                <i class="play material-icons md-28" alt="speech text" onclick="onPlay()">volume_up</i>
+            </div>
+            
+
+            <h1>Aprende con nosotros</h1>
+            <p id="home-intro">
+                ¿Vienes a aprender a leer en tu idioma? ¿Quieres aprender un idioma nuevo? ¡Llegaste al lugar indicado, nosotros te apoyaremos!
+            </p>
         </div>
 
         <span class="lgtbx"></span>
@@ -97,27 +110,28 @@
     <main>
         <section class="section">
         
-            <article class="Intro">
-
+            <article id="intro">
+                
                 <header>
-                    <h2>Introduccion y uso</h2>
+                    <h2>Introduccion</h2>
                 </header>
 
                     <p class="main-paragraph">
-                        Antes de comenzar, asegurate que tienes un familiar, amigo o cualquier persona quien te pueda guiar a utilizando nuestro servicio
-                        actual, si no es asi, por favor hazlo para comenzar
+                        Antes de comenzar con tu aprendizaje, en el caso de que vengas con el objetivo de aprender a leer tu idioma, asegurate que tienes un familiar,
+                        amigo o cualquier persona quien te pueda guiar a utilizando nuestro servicio actual, si en cambio vienes con el objetivo de aprender un nuevo idioma
+                        sigue adelante y lee nuestra guia de inicio!
                     </p>
                     
             </article>
             
-            <hr/>
+            <hr>
         </section>
 
         <section class="section">
         
-            <article class="learn-vowels">
+            <article id="learn-vowels">
                 <header>
-                    <h2>Aprende las vocales!</h2>
+                    <h2>¡Aprende las vocales!</h2>
                 </header>
 
                 <p>
@@ -125,28 +139,28 @@
                     correctamente!
                 </p>
                 <table id="vowels" align="center">
-                    <tr>
+                    <tbody><tr>
                         <td style="color:red;">a</td>
                         <td style="color:darkgreen;">b</td>
                         <td style="color:blueviolet;">c</td>
                         <td style="color:blue;">d</td>
                     </tr>
-                </table>
+                </tbody></table>
 
                 <p>
-                    Asegurate de haber practicado su pronunciacion y escritura!
+                    ¡Asegurate de haber practicado su pronunciacion y escritura!
                 </p>
             </article>
 
-            <hr/>
+            <hr>
         </section>
         
         
         <section class="section">
         
-            <article class="learn-syllables">
+            <article id="learn-syllables">
                 <header>
-                    <h2>Ahora que ya sabes las vocales podemos comenzar con las silabas!</h2>
+                    <h2>Ahora que ya sabes las vocales comencemos con las silabas.</h2>
                 </header>
 
                 <p>
@@ -154,7 +168,7 @@
                 </p>
                 <table id="syllables" align="center">
 
-                    <tr style="color:aqua;">
+                    <tbody><tr style="color:aqua;">
                         <td>Ba</td>
                         <td>Ca</td>
                         <td>Da</td>
@@ -262,7 +276,7 @@
                         <td>Llo</td>
                     </tr>
 
-                    <tr style="color:aqua;">
+                    <tr style="color:rgb(211, 113, 60);">
                         <td>Bu</td>
                         <td>Cu</td>
                         <td>Du</td>
@@ -289,108 +303,148 @@
                         <td>Llu</td>
                     </tr>
 
-                </table>
+                </tbody></table>
             </article>
             
-            <hr/>
+            <hr>
         </section>
     
+        <header>
+            <h1 id="tools">¡Nuestras herramientas!</h1>
+        </header>
+        <hr>
+
         <section class="section">
         
-            <article class="Intro">
+            <article id="stories">
 
                 <header>
-                    <h2>Practica lo que has aprendido!</h2>
+                    <h2>Practica lo que has aprendido.</h2>
                 </header>
 
                     
-                    <!-- <a class="show-msg" href="#optional-text" onclick="showMsg()">Mostrar Mensaje</a> -->
-                    <p class="main-paragraph">
-                        ¡Tenemos algunas historias divertidas e interesantes para que no te aburras en tu aprendizaje!.
-                        <br/>
-                    </p>
-                    <h3>¡No te preocupes si tienes problemas!</h3>
-                    <p>
-                        Contamos con algunas herramientas que te pueden ser de utilidad para ayudarte y enriquecer tu aprendizaje.
-                        ¡Veras que son intuitivas y faciles de encontrar!. Intenta poner el raton sobre una palabra
-                    </p>
-                    
-                </article>
+                <!-- <a class="show-msg" href="#optional-text" onclick="showMsg()">Mostrar Mensaje</a> -->
+                <p class="main-paragraph">
+                    ¡Tenemos algunas historias divertidas e interesantes para que no te aburras en tu aprendizaje!.
+                    <br>
+                </p>
+                <h3>¡No te preocupes si tienes problemas!</h3>
+                <p>
+                    Contamos con algunas herramientas que te pueden ser de utilidad para ayudarte y enriquecer tu aprendizaje.
+                    ¡Podrás apoyarte de ellas si tienes problemas!
+                </p>
                 
-                <hr/>
+                <button id="generate-story" onclick="generateStory()">Generar Cuento</button>
+                <p id="story" class="result-text"></p>
+                    
+            </article>    
+            <hr>
+
+        </section>
+                
+        </section>
+
+            <section class="section">
+    
+                <article id="text-analytics">
+    
+                    <header>
+                        <h2>Obtener frases clave</h2>
+                    </header>
+    
+                    <p class="main-paragraph">
+                        Con esta herramienta podras obtener las frases clave de algun texto que desees, puede serte util para mejorar tus habilidades de comprension lectora ;).
+                    </p>
+
+                    <!-- <a class="show-msg" href="#optional-text" onclick="showMsg()">Mostrar Mensaje</a> -->
+                    <textarea class="input-text" id="key-phrases-input">El dia empieza con esa sensacion de tristeza que siempre acompaña a las despedidas. Hoy es nuestra ultima jornada en Morelía y, desde la terraza en la que disfrutamos un café que nos ayude a despertar y respirar el aroma con el que la ciudad nos despiden</textarea>
+                    <button onclick="analyzeText()" id="analyze">Analizar</button>
+                    <p class="result-text"></p>
+                        
+                </article>
+                <hr>
+
             </section>
 
-        <!-- <section class="section">
+            <section class="section">
     
-            <article class="Intro">
-
-                <header>
-                    <h2>Repasa lo aprendido!</h2>
-                </header>
-
+                <article id="dictionary">
+    
+                    <header>
+                        <h2>Diccionario</h2>
+                    </header>
+    
+                    <!-- <a class="show-msg" href="#optional-text" onclick="showMsg()">Mostrar Mensaje</a> -->
                     <p class="main-paragraph">
-                        En esta seccion encontraras tu progreso de aprendizaje para que te asegures de haber aprendido todo correctamente.
-                        ¡No olvides practicar lo que se te dificulte!
+                        ¿Necesitas ayuda con el significado de alguna palabra?. Aqui podras consultar el significado de cualquier palabra que no entiendas.
                     </p>
                     
+                    <input type="search" name="word" class="input-text" id="user-word">
+                    <button onclick="dictionary()">Consultar</button>
+                    <p class="result-text"></p>
+                    
                 </article>
-                
-        </section> -->
+                <hr>
+
+            </section>
+            
             
             <section class="section">
-        
-                <article class="Intro">
     
+                <article id="translate">
+    
+                    <header>
+                        <h2>Servicio de traduccion</h2>
+                    </header>
+    
+                    <!-- <a class="show-msg" href="#optional-text" onclick="showMsg()">Mostrar Mensaje</a> -->
+                    <p class="main-paragraph">
+                        En esta seccion podras utilizar nuestro servicio de traduccion de texto, te sera especilmente util si estas utilizando nuestros servicios para aprender un nuevo idioma.
+                    </p>
+
+                    <input type="search" name="translate-input" class="input-text" id="translate-input">
+                    <button onclick="javascript:translate()">Traducir</button>
+                    <p class="result-text"></p>
+                    
+                </article>
+                <hr>
+
+            </section>
+
+            <section class="section">
+        
+                <article id="image-analytics">
+
                     <header>
                         <h2>¿Tienes problemas leyendo una imagen?, ¡Aqui te ayudaremos!</h2>
                     </header>
-    
-                        <p class="main-paragraph">
-                            Al igual que siempre, puedes apoyarte de las herramientas que te brindamos para ayudarte con tu aprendizaje.
-                        </p>
+
+                    <p class="main-paragraph">
+                        Al igual que siempre, puedes apoyarte de las herramientas que te brindamos para ayudarte con tu aprendizaje.
+                    </p>
                         
-                        <div id="analyze">
-                            <img src="" class="image" id="image" / >
-                            <!-- Action: send link to nodejs module -->
-                            <!-- http://localhost:4000/post-test -->
-                            <!-- action="getImgText()"  -->
-                            <!-- method="POST" enctype="multipart/form-data" -->
-                            <form>
-                                <!-- <input type="url" placeholder="https://i.imgur.com/u2Unmra.jpeg" class="img-link" required /> -->
-                                <input type="file" name="imgFile" id="img-File">
-                                <!-- <input type="submit" value="Upload Image" name="submit"> -->
-                                <input type="button" value="Subir Imagen" name="submit" onclick="getImgText()">
-                            </form>
+                    <div id="analyze">
+                        <img src="" class="image" id="image">
 
-                            <div class="result-text">
-                                <!-- Create text element with its content with js -->
-                                <p id="img-text"></p>
-                            </div>
+                        <!-- Local file -->
+                        <!-- <input type="file" name="imgFile" id="img-File"> -->
+                        <!-- <button onclick="javascript:getImgText()">Subir Imagen</button> -->
+                        
+                        <!-- External -->
+                        <input type="url" name="url" placeholder="https://imgur.com/gallery/c7GV4Og" id="image-url">
+                        <input type="submit" name="submit-image" value="Obtener Texto" onclick="javascript:getImgText()">
 
+                        <div class="result-text">
+                            <!-- Create text element with its content with js -->
+                            <p id="img-text"></p>
                         </div>
 
-                    </article>
-                    
-                    <hr/>
-                </section>
+                    </div>
 
-                <section class="section">
-        
-                    <article class="Intro">
-        
-                        <header>
-                            <h2>Bienvenido a la guia de uso para nuestras herramientas!</h2>
-                        </header>
-        
-                            <!-- <a class="show-msg" href="#optional-text" onclick="showMsg()">Mostrar Mensaje</a> -->
-                            <p class="main-paragraph">
-                                No dejes que te intimiden, tienen la caracteristica de ser muy intuitivas y faciles de usar.
-                            </p>
-                            
-                    </article>
-                    
-                    <hr/>
-                </section>
+                </article>
+                <hr>
+
+            </section>
 
     </main>
 
@@ -402,21 +456,3 @@
 
 </html>
 
-<!-- Sidebar -->
-    <!-- <input type="checkbox" id="check">
-    <label for="check">
-        <i class="menu-icon material-icons md-24" alt="menu bar">menu_open</i>
-        <i class="fas fa-times" id="cancel"></i>
-    </label>
-    <div class="sidebar">
-        <header>Navigation</header>
-        <ul>
-            <li><a href="#"><i class="fas fa-qrcode"></i>Home</a></li>
-            <li><a href="#"><i class="fas fa-link"></i>Vowels</a></li>
-            <li><a href="#"><i class="fas fa-stream"></i>Syllables</a></li>
-            <li><a href="#"><i class="fas fa-calendar-week"></i>Stories</a></li>
-            <li><a href="#"><i class="far fa-question-circle"></i>Learned</a></li>
-            <li><a href="#"><i class="fas fa-sliders-h"></i>Speech</a></li>
-            <li><a href="#"><i class="far fa-envelope"></i>About</a></li>
-        </ul>
-    </div> -->
