@@ -1,9 +1,8 @@
 // Server modules
-const http = require('http');
 const fs = require('fs');
 const express = require('express');
 const path = require('path');
-const multer = require('multer');
+var busboy = require('connect-busboy'); //middleware for form/file upload
 
 // Azure modules
 const translate = require("./utils/Language/Translation.js")
@@ -13,24 +12,10 @@ const dictionary = require("./utils/External/Dictionary.js");
 const keyPhrases = require("./utils/TextAnalytics/KeyPhrases.js");
 
 
-// Other
-const helpers = require('./helpers');
+// Default language: spanish
+LANG_CODE = 'es';
 
-// function callModule (func, args) {
-//     // console.log(...args);
-//     func(...args)
-//     .then((value) => {
-//         console.log(value);
-//     })
-//     .catch((err) => console.log(err));   
-// }
-
-LANG_CODE = "es";
-function getDefaultLangCode() {
-    // Code
-}
-
-
+// App
 const app = express();
 
 // Default web app port
@@ -49,6 +34,7 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }));
+app.use(busboy());
 
 
 // Other middlewares
@@ -60,67 +46,55 @@ app.use(logger);
 // Initialize web page
 app.use(express.static(path.join(__dirname, 'WebPage')));
 
-const storage = multer.diskStorage({
-    destination: function(req, file, cb) {
-        cb(null, 'uploads/');
-    },
 
-    // By default, multer removes file extensions so let's add them back
-    filename: function(req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-    }
-});
-
+// Init server
 app.listen(app.get('port'), () => {
     console.log("Server on port ", app.get('port'));
 })
 
 // POST routes
 
+
 // Analyze some img
-app.post('/analyze-img', (req, res) => {
+app.post('/analyze-img-local', (req, res) => {
 
-    var image = req.file;
-    
-    // let upload = multer({ storage: storage, fileFilter: helpers.imageFilter }).single('img-File');
+    var fstream;
+    var image;
+    var fileName;
 
-    // upload(req, res, function(err) {
-        
-    //     console.log("Upload file");
-    //     console.log("req: ", req);
-    //     // req.file contains information of uploaded file
-    //     // req.body contains information of text fields, if there were any
+    req.pipe(req.busboy);
 
-    //     if (req.fileValidationError) {
-    //         console.log("File validation error");
-    //         return res.send(req.fileValidationError);
-    //     }
-    //     else if (!req.file) {
-    //         console.log("No file selected");
-    //         return res.send('Please select an image to upload');
-    //     }
-    //     else if (err instanceof multer.MulterError) {
-    //         console.log("Multer error");
-    //         return res.send(err);
-    //     }
-    //     else if (err) {
-    //         console.log("Something went wrong when uploading image file");
-    //         return res.send(err);
-    //     }
+    req.busboy.on('file', function (fieldname, file, filename) {
+        console.log("Uploading: " + filename);
 
-    //     image = req.file;
-    //     // res.send(`You have uploaded this image: <hr/><img src="${req.file.path}" width="500"><hr /><a href="./">Upload another image</a>`);
-    // });
-    
-    // If there is an image then process it with the azure module and send the text
-    console.log(image);
-    console.log(req);
-    if (image != undefined) {
+        fileName = filename;
 
-        // Image path to be getted by the img html element
-        // res.send(image);
+        //Path where image will be uploaded
+        fstream = fs.createWriteStream(path.join(__dirname, '/WebPage/uploads', filename ) );
+        file.pipe(fstream);
+        fstream.on('close', function () {    
+            console.log("Upload Finished of " + filename);        
+            // res.redirect('back');
+        });
 
-        analyze(image)
+        fileName = path.join(__dirname, '/WebPage/uploads', fileName );
+        console.log("File path: ", fileName);
+
+        // image = fs.readFile(path.join(__dirname, '/WebPage/uploads', fileName ), function (err, data) {
+        //     if (err) throw err;
+        //     // return data;
+        //     analyze(data)
+        //     .then((value) => {
+        //         console.log(typeof(value));
+        //         console.log("value: ", value);
+        //         res.status(200).send(value);
+        //     })
+        //     .catch((err) => {
+        //         console.log("POST analyze error: ", err);
+        //         res.status(500);
+        //     });
+
+        analyze(fileName)
             .then((value) => {
                 console.log(typeof(value));
                 console.log("value: ", value);
@@ -130,7 +104,25 @@ app.post('/analyze-img', (req, res) => {
                 console.log("POST analyze error: ", err);
                 res.status(500);
             });
-    }
+
+        });
+});
+
+app.post('/analyze-img-remote', (req, res) => {
+
+    let data = req.body;
+    console.log("Data: ", data);
+    
+    analyze(data.url)
+        .then((value) => {
+            console.log(typeof(value));
+            console.log("value: ", value);
+            res.status(200).send(value);
+        })
+        .catch((err) => {
+            console.log("POST analyze error: ", err);
+            res.status(500);
+        });
 });
 
 
@@ -166,22 +158,6 @@ app.post('/oxford-dictionary', (req, res) => {
     })
     .catch( res.status(500) );
 
-    // TEST
-
-    /* const data = {
-        "word": "herramienta",
-    };
-    
-    fetch("/oxford-dictionary", {
-            method: "POST", 
-            headers: {
-                "Content-Type": "application/json",
-              },
-            body: JSON.stringify(data)
-        })
-        .then(response => console.log("Response: ", response))
-            .catch(console.log("Error when requesting /oxford-dictionary")); */
-
 });
 
 
@@ -213,22 +189,6 @@ app.post('/translate', (req, res) => {
         })
     })
     .catch(err => res.status(500));
-
-    // TEST
-
-    /* const data = {
-        "text": "Translation",
-    };
-    
-    fetch("/translate", {
-            method: "POST", 
-            headers: {
-                "Content-Type": "application/json",
-              },
-            body: JSON.stringify(data)
-        })
-        .then(response => console.log("Response: ", response))
-            .catch(console.log("Error when requesting /translate")); */
 
 });
 
